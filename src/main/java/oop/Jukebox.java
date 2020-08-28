@@ -2,13 +2,14 @@ package oop;
 
 public class Jukebox {
 
-    public void music(int position){
-        if(position == 1) {
+    public void music(int position) {
+        if (position == 1) {
             System.out.println("Pust begut neuklugi");
         }
         if (position == 2) {
             System.out.println("Spokoinoi nochi");
-        } if (position != 1 & position != 2){
+        }
+        if (position != 1 & position != 2) {
             System.out.println("Sing not found");
         }
     }
