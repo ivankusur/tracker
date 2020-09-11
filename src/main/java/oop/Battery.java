@@ -7,15 +7,20 @@ public class Battery {
         this.load = load;
     }
 
-    public void exchenge(Battery another) {
+
+
+
+
+    public void exchange(Battery another) {
         this.load = this.load - another.load;
         another.load = 0;
     }
 
+
     public static void main(String[] args) {
         Battery poweBank = new Battery(10000);
         Battery cellphone = new Battery(4000);
-        poweBank.exchenge(cellphone);
+        poweBank.exchange(cellphone);
         System.out.println(poweBank.load);
 
     }
