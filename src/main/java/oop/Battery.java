@@ -7,21 +7,16 @@ public class Battery {
         this.load = load;
     }
 
-
-
-
-
     public void exchange(Battery another) {
-        this.load = this.load - another.load;
-        another.load = 0;
+        another.load = this.load + another.load;
+        this.load -= this.load;
     }
 
-
     public static void main(String[] args) {
-        Battery poweBank = new Battery(10000);
-        Battery cellphone = new Battery(4000);
-        poweBank.exchange(cellphone);
-        System.out.println(poweBank.load);
-
+        Battery cellphone = new Battery(1000);
+        Battery powerBank = new Battery(2000);
+        powerBank.exchange(cellphone);
+        System.out.println(powerBank.load);
+        System.out.println(cellphone.load);
     }
 }
