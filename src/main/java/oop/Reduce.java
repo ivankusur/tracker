@@ -5,7 +5,6 @@ public class Reduce {
     // Обьект класса reduce в методе to принимает не переменную array, а поле класса с таким же названием
 
     public void to(int[] array) {
-        array = array;
     }
 
     public void print() {
