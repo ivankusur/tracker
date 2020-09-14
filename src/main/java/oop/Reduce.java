@@ -4,7 +4,8 @@ public class Reduce {
     private int[] array = {1, 2, 3};
     // Обьект класса reduce в методе to принимает не переменную array, а поле класса с таким же названием
 
-    public void to(int[] array) {
+
+    public void to(int[] rang) {
     }
 
     public void print() {
@@ -15,8 +16,8 @@ public class Reduce {
 
     public static void main(String[] args) {
         int[] array = {1, 2, 3};
-        Reduce reduce = new Reduce();
-        reduce.to(array);
-        reduce.print();
+        Reduce shrink = new Reduce();
+        shrink.to(array);
+        shrink.print();
     }
 }
