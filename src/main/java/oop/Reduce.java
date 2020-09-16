@@ -1,11 +1,12 @@
 package oop;
 
 public class Reduce {
-    private int[] array = {1, 2, 3};
+    private int[] array;
     // Обьект класса reduce в методе to принимает не переменную array, а поле класса с таким же названием
 
 
-    public void to(int[] rang) {
+    public void to(int[] array) {
+        this.array = array;
     }
 
     public void print() {
