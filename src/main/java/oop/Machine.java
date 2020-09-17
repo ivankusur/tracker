@@ -14,6 +14,9 @@ public class Machine {
                 surrender = surrender - coin;
                 rsl[size++] = coin;
             }
+            if (surrender == 0) {
+                break;
+            }
         }
         return Arrays.copyOf(rsl, size);
     }
