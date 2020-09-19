@@ -2,7 +2,7 @@ package ru.job4j.tracker;
 
 import java.util.Date;
 
-public class Builder extends Engineer{
+public class Builder extends Engineer {
     private String name;
     private String surname;
     private String education;
@@ -19,7 +19,7 @@ public class Builder extends Engineer{
     }
 
 
-    public void controlBuildMaterial () {
+    public void controlBuildMaterial() {
 
     }
 }

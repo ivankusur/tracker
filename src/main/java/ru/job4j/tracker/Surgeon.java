@@ -21,7 +21,6 @@ public class Surgeon extends Doctor {
     }
 
 
-    public void operating(String patient){
-
+    public void operating(String patient) {
     }
 }

@@ -22,8 +22,7 @@ public class Engineer extends Profession {
     }
 
 
-    public void preparationTechnicalDoc(){
-
+    public void preparationTechnicalDoc() {
     }
 
 }

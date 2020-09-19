@@ -2,12 +2,12 @@ package oop;
 
 import java.awt.*;
 
-public class Trianglee {
+public class Triangle {
     private Point first;
     private Point second;
     private Point third;
 
-    public Trianglee(Point ab, Point bc, Point ac) {
+    public Triangle(Point ab, Point bc, Point ac) {
         this.first = ab;
         this.second = bc;
         this.third = ac;

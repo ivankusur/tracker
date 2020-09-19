@@ -15,18 +15,11 @@ public class Dentist extends Doctor {
         super(name, surname, education, birthDay, specialization);
     }
 
-
     public String getSpecializationOfDentist() {
         return specializationOfDentist;
     }
 
 
     public void fill(String patient){
-
     }
-
-
-
-
-
 }
