@@ -9,25 +9,22 @@ public class Library {
 
         Book[] javaBooks = {cleanCode, javaEffectiveProgramming, headFirstJava, thinkingInJava};
 
-        for (int i = 0; i < javaBooks.length; i++) {
-            Book books = javaBooks[i];
+        for (Book books : javaBooks) {
             System.out.println(books.getName() + ": " + books.getNumbersOfPages());
         }
         System.out.println();
 
-        Book temp = new Book("", 1);
+        Book temp;
         temp = javaBooks[3];
         javaBooks[3] = javaBooks[0];
         javaBooks[0] = temp;
-        for (int i = 0; i < javaBooks.length; i++) {
-            Book books = javaBooks[i];
+        for (Book books : javaBooks) {
             System.out.println(books.getName() + ": " + books.getNumbersOfPages());
         }
         System.out.println();
 
-        for (int i = 0; i < javaBooks.length; i++) {
-            Book books = javaBooks[i];
-            if (javaBooks[i].equals(cleanCode)) {
+        for (Book books : javaBooks) {
+            if (books.equals(cleanCode)) {
                 System.out.println(books.getName() + ": " + books.getNumbersOfPages());
             }
         }
