@@ -8,7 +8,6 @@ public class Tracker {
     private int size = 0;
 
     public Tracker() {
-
     }
     public Tracker(int ids) {
         this.ids = ids;
