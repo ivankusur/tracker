@@ -1,4 +1,4 @@
-package ru.job4j.tracker;
+package pojo;
 
 import java.util.Date;
 
