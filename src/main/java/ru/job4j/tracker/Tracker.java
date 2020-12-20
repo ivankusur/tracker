@@ -7,27 +7,6 @@ public class Tracker {
     private int ids = 1;
     private int size = 0;
 
-    public Tracker() {
-    }
-    public Tracker(int ids) {
-        this.ids = ids;
-    }
-
-    public Item[] getItems() {
-        return items;
-    }
-    public int getIds() {
-        return ids;
-    }
-    public void setIds(int ids) {
-        this.ids = ids;
-    }
-    public int getSize() {
-        return size;
-    }
-    public void setSize(int size) {
-        this.size = size;
-    }
 
     public Item add(Item item) {
         item.setId(ids++);
@@ -59,16 +38,7 @@ public class Tracker {
     }
 
     public Item[] findAll() {
-        int size = 0;
-        Item[] itemsWithoutNull = new Item[items.length];
-        for (int index = 0; index <= items.length - 1; index++) {
-            Item item = items[index];
-            if (item != null) {
-                itemsWithoutNull[index] = item;
-                size++;
-            }
-        }
-        return Arrays.copyOf(itemsWithoutNull, size);
+        return Arrays.copyOf(items, size);
     }
 }
 
