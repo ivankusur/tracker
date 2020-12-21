@@ -47,25 +47,17 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
-        for (int i = 0; i < size; i++) {
-            if (indexOf(id) == indexOf(items[i].getId())) {
-                item.setId(items[i].getId());
-                this.items[i] = item;
-                break;
-            }
-        }
-        return findById(id).equals(item);
+        this.items[indexOf(id)] = item;
+        item.setId(id);
+        return indexOf(id) != -1;
     }
 
     public boolean delete(int id) {
-        for (int i = 0; i < size; i++) {
-            if (indexOf(id) == indexOf(items[i].getId())) {
-                items[i] = null;
-                System.arraycopy(items, i + 1, items, i, size - i);
-                items[size - 1] = null;
-                size--;
-            }
-        }
+        int previousIndex = indexOf(id);
+        this.items[indexOf(id)] = null;
+        System.arraycopy(items, previousIndex + 1, items, previousIndex, size - previousIndex);
+        items[size - 1] = null;
+        size--;
         return findById(id + 1) == null;
     }
 }
