@@ -36,8 +36,8 @@ public class Tracker {
             Item item = items[i];
             if (item.getName().equals(key)) {
                 rsl[i] = item;
+                counter++;
             }
-            counter++;
         }
         return Arrays.copyOf(rsl, counter);
     }
