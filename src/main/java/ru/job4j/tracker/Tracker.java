@@ -47,9 +47,13 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
-        this.items[indexOf(id)] = item;
-        this.items[indexOf(id)].setId(id);
-        return indexOf(id) != -1;
+        int index = indexOf(id);
+        if (index == -1) {
+            return false;
+        } else {
+            items[index].setName(item.getName());
+            return true;
+        }
     }
 
     public boolean delete(int id) {
