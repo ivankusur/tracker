@@ -35,7 +35,7 @@ public class Tracker {
         for (int i = 0; i < size; i++) {
             Item item = items[i];
             if (item.getName().equals(key)) {
-                rsl[i] = item;
+                rsl[counter] = item;
                 counter++;
             }
         }
@@ -54,7 +54,7 @@ public class Tracker {
 
     public boolean delete(int id) {
         int previousIndex = indexOf(id);
-        this.items[indexOf(id)] = null;
+        this.items[previousIndex] = null;
         System.arraycopy(items, previousIndex + 1, items, previousIndex, size - previousIndex);
         items[size - 1] = null;
         size--;
