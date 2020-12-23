@@ -57,11 +57,15 @@ public class Tracker {
     }
 
     public boolean delete(int id) {
-        int previousIndex = indexOf(id);
-        this.items[previousIndex] = null;
-        System.arraycopy(items, previousIndex + 1, items, previousIndex, size - previousIndex);
-        items[size - 1] = null;
-        size--;
-        return findById(id + 1) == null;
+        int index = indexOf(id);
+        if (index == -1) {
+            return false;
+        } else {
+            items[index] = null;
+            System.arraycopy(items, index + 1, items, index, size - index);
+            items[size - 1] = null;
+            size--;
+            return true;
+        }
     }
 }
