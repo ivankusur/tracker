@@ -8,12 +8,14 @@ public class FindByNameAction implements UserAction {
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        int selectId = Integer.valueOf(input.askStr("Enter id item"));
-        Item item = tracker.findById(selectId);
-        if (item != null) {
-            System.out.println(item.toString());
+        String selectName = input.askStr("Enter name");
+        Item[] items = tracker.findByName(selectName);
+        if (items.length > 0) {
+            for (Item item : items) {
+                System.out.println(item.toString());
+            }
         } else {
-            System.out.println("Item with your ID not founded");
+            System.out.println("Items with this NAME not founded");
         }
         return true;
     }
