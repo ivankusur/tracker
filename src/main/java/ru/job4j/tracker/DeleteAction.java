@@ -1,6 +1,11 @@
 package ru.job4j.tracker;
 
 public class DeleteAction implements UserAction {
+    private final Output out;
+
+    public DeleteAction(Output out) {
+        this.out = out;
+    }
     @Override
     public String name() {
         return "Delete Item";
@@ -10,9 +15,9 @@ public class DeleteAction implements UserAction {
     public boolean execute(Input input, Tracker tracker) {
         int selectId = Integer.valueOf(input.askStr("Enter Id Item"));
         if (tracker.delete(selectId)) {
-            System.out.println("Editing successful");
+            out.println("Editing successful");
         } else {
-            System.out.println("ID not founded");
+            out.println("ID not founded");
         }
         return true;
     }

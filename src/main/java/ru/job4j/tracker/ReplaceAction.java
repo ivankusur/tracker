@@ -3,6 +3,11 @@ package ru.job4j.tracker;
 import static java.lang.String.valueOf;
 
 public class ReplaceAction implements UserAction {
+    private final Output out;
+
+    public ReplaceAction(Output out) {
+        this.out = out;
+    }
     @Override
     public String name() {
         return "Replace item";
@@ -14,9 +19,9 @@ public class ReplaceAction implements UserAction {
         String selectName = valueOf(input.askStr("Enter name: "));
         Item item = new Item(selectName);
         if (tracker.replace(selectId, item)) {
-            System.out.println("Editing successful");
+            out.println("Editing successful");
         } else {
-            System.out.println("Item with this ID not founded");
+            out.println("Item with this ID not founded");
         }
         return true;
     }
