@@ -6,6 +6,7 @@ public class FindEl {
         for (int index = 0; index < value.length; index++) {
             if (value[index].equals(key)) {
                 rsl = index;
+                break;
             }
             if (rsl == -1) {
                 throw new ElementNotFoundException("Element " + key + " is absent");
@@ -14,7 +15,7 @@ public class FindEl {
         return rsl;
     }
 
-    public static void main(String[] args) throws ElementNotFoundException {
+    public static void main(String[] args) {
         String[] value = {"a", "b", "c"};
         try {
             indexOf(value, "abc");
