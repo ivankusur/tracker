@@ -1,6 +1,7 @@
 package ru.job4j.exception;
 
 public class FindEl {
+
     public static int indexOf(String[] value, String key) throws ElementNotFoundException {
         int rsl = -1;
         for (int index = 0; index < value.length; index++) {
@@ -8,9 +9,9 @@ public class FindEl {
                 rsl = index;
                 break;
             }
-            if (rsl == -1) {
-                throw new ElementNotFoundException("Element " + key + " is absent");
-            }
+        }
+        if (rsl == -1) {
+            throw new ElementNotFoundException("Element " + key + " is absent");
         }
         return rsl;
     }
