@@ -9,9 +9,9 @@ public class UserStore {
                 rsl = users[i];
                 break;
             }
-            if (rsl == null) {
-                throw new UserNotFoundException("Login not founded");
-            }
+        }
+        if (rsl == null) {
+            throw new UserNotFoundException("Login not founded");
         }
         return rsl;
     }
