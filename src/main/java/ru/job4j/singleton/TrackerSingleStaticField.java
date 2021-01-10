@@ -1,9 +1,6 @@
 package ru.job4j.singleton;
 
-import ru.job4j.tracker.Item;
-
 public class TrackerSingleStaticField {
-
     private static TrackerSingleStaticField instance;
 
     private TrackerSingleStaticField() {
@@ -14,10 +11,6 @@ public class TrackerSingleStaticField {
             instance = new TrackerSingleStaticField();
         }
         return instance;
-    }
-
-    public Item add(Item model) {
-        return model;
     }
 }
 
