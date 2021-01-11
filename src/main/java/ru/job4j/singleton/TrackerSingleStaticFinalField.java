@@ -1,17 +1,19 @@
 package ru.job4j.singleton;
 
+import ru.job4j.tracker.Tracker;
+
 public class TrackerSingleStaticFinalField {
-    private static final TrackerSingleStaticFinalField INSTANCE = new TrackerSingleStaticFinalField();
+    private static final Tracker INSTANCE = new Tracker();
 
     private TrackerSingleStaticFinalField() {
     }
 
-    public static TrackerSingleStaticFinalField getInstance() {
+    public static Tracker getInstance() {
         return INSTANCE;
     }
 
     public static void main(String[] args) {
-        TrackerSingleStaticFinalField tracker = TrackerSingleStaticFinalField.getInstance();
+        Tracker tracker = TrackerSingleStaticFinalField.getInstance();
     }
 }
 

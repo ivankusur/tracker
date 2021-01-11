@@ -1,18 +1,20 @@
 package ru.job4j.singleton;
 
+import ru.job4j.tracker.Tracker;
+
 public class TrackerSinglePrivatFinalStaticClass {
     private TrackerSinglePrivatFinalStaticClass() {
     }
 
-    public static TrackerSinglePrivatFinalStaticClass getInstance() {
+    public static Tracker getInstance() {
         return Holder.INSTANCE;
     }
 
     private static final class Holder {
-        private static final TrackerSinglePrivatFinalStaticClass INSTANCE = new TrackerSinglePrivatFinalStaticClass();
+        private static final Tracker INSTANCE = new Tracker();
     }
 
     public static void main(String[] args) {
-        TrackerSinglePrivatFinalStaticClass tracker = TrackerSinglePrivatFinalStaticClass.getInstance();
+        Tracker tracker = TrackerSinglePrivatFinalStaticClass.getInstance();
     }
 }
