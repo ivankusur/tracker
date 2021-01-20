@@ -118,7 +118,7 @@ public class StartUITest {
     public void whenFindById() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[]{"0", "0", "1"}
+                new String[]{"0", "1", "1"}
         );
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Searched item"));

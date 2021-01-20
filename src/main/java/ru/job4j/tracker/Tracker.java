@@ -5,14 +5,14 @@ import java.util.List;
 
 public class Tracker {
     private final List<Item> items = new ArrayList<>();
-    private int ids = 0;
+    private int ids = 1;
 
 
     private int indexOf(int id) {
         int rsl = -1;
-        for (Item item : items) {
-            if (item.getId() == id) {
-                rsl = item.getId();
+        for (int index = 0; index < items.size(); index++) {
+            if (items.get(index).getId() == id) {
+                rsl = index;
                 break;
             }
         }
