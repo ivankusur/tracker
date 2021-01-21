@@ -15,13 +15,13 @@ public class BankServiceTest {
         assertThat(bank.findByPassport("3434"), is(user));
     }
 
-    @Test (expected = NullPointerException.class)
+    @Test
     public void whenEnterInvalidPassport() {
         User user = new User("3434", "Petr Arsentev");
         BankService bank = new BankService();
         bank.addUser(user);
         bank.addAccount(user.getPassport(), new Account("5546", 150D));
-        bank.findByRequisite("34", "5546");
+        assertNull(bank.findByRequisite("34", "5546"));
     }
 
     @Test
