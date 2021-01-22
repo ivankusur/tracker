@@ -36,8 +36,5 @@ public class UserTest {
         Set<User> users = new TreeSet<>();
         users.add(new User("Petr", 31));
         users.add(new User("Petr", 32));
-        System.out.println(users);
     }
-
-
 }

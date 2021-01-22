@@ -28,11 +28,10 @@ public class User implements Comparable<User> {
 
     @Override
     public int compareTo(User user) {
-        int nameCompare = this.name.compareTo(user.name);
-        if (nameCompare == 0) {
-            return this.age - user.age;
-        } else {
-            return nameCompare;
+        int compare = this.name.compareTo(user.name);
+        if (compare == 0) {
+            return Integer.compare(this.age, user.age);
         }
+        return compare;
     }
 }
