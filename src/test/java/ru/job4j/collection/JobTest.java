@@ -13,6 +13,19 @@ import static org.junit.Assert.*;
 public class JobTest {
 
     @Test
+    public void whenComparatorBySameNameAndPriority() {
+        List<Job> rsl = Arrays.asList(
+                new Job("Impl task", 1),
+                new Job("Impl task", 0)
+        );
+        rsl.sort(new JobAscByName());
+        assertThat(rsl, is(Arrays.asList(
+                new Job("Impl task", 0),
+                new Job("Impl task", 1)
+        )));
+    }
+
+    @Test
     public void whenComparatorByNameAndPriority() {
         Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobDscByPriority());
         int rsl = cmpNamePriority.compare(
