@@ -14,11 +14,12 @@ public class JobTest {
 
     @Test
     public void whenComparatorBySameNameAndPriority() {
+        Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobDscByPriority());
         List<Job> rsl = Arrays.asList(
                 new Job("Impl task", 1),
                 new Job("Impl task", 0)
         );
-        rsl.sort(new JobAscByName());
+        rsl.sort(cmpNamePriority);
         assertThat(rsl, is(Arrays.asList(
                 new Job("Impl task", 0),
                 new Job("Impl task", 1)
