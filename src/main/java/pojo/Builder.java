@@ -9,8 +9,8 @@ public class Builder extends Engineer {
     private Date birthDay;
     private String kindProject;
 
-
-    public Builder(String name, String surname, String education, Date birthDay, String specialization) {
+    public Builder(String name, String surname, String education,
+                   Date birthDay, String specialization) {
         super(name, surname, education, birthDay, specialization);
     }
 
@@ -18,8 +18,6 @@ public class Builder extends Engineer {
         return kindProject;
     }
 
-
     public void controlBuildMaterial() {
-
     }
 }

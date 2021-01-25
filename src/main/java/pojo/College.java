@@ -7,6 +7,7 @@ public class College {
         student.setName("Ivan Nikolaev");
         student.setGroup("java");
         student.setBirtDay("15.07.1990");
-        System.out.println(student.getName() + " " + student.getBirtDay() + " group: " + student.getGroup());
+        System.out.println(student.getName() + " "
+                + student.getBirtDay() + " group: " + student.getGroup());
     }
 }

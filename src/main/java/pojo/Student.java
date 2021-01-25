@@ -5,7 +5,6 @@ public class Student {
     private String group;
     private String birtDay;
 
-
     public String getName() {
         return name;
     }

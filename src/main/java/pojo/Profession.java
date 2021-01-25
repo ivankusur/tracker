@@ -8,7 +8,6 @@ public class Profession {
     private String education;
     private Date birthDay;
 
-
     public String getName() {
         return name;
     }
@@ -24,6 +23,4 @@ public class Profession {
     public Date getBirthDay() {
         return birthDay;
     }
-
-
 }

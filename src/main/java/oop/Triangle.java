@@ -21,7 +21,6 @@ public class Triangle {
         return first + second > third && second + third > first && third + first > second;
     }
 
-
     public double area() {
         double rsl = -1;
         double ab = first.distance(second);

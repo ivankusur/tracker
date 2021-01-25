@@ -9,7 +9,8 @@ public class Doctor extends Profession {
     private Date birthDay;
     private String specialization;
 
-    public Doctor(String name, String surname, String education, Date birthDay, String specialization) {
+    public Doctor(String name, String surname, String education,
+                  Date birthDay, String specialization) {
         this.name = name;
         this.surname = surname;
         this.education = education;

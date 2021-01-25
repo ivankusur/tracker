@@ -10,8 +10,8 @@ public class Dentist extends Doctor {
     private String specialization;
     private String specializationOfDentist;
 
-
-    public Dentist(String name, String surname, String education, Date birthDay, String specialization) {
+    public Dentist(String name, String surname, String education,
+                   Date birthDay, String specialization) {
         super(name, surname, education, birthDay, specialization);
     }
 
@@ -19,7 +19,7 @@ public class Dentist extends Doctor {
         return specializationOfDentist;
     }
 
+    public void fill(String patient) {
 
-    public void fill(String patient){
     }
 }

@@ -11,15 +11,14 @@ public class Surgeon extends Doctor {
     private String specialization;
     private int numbersOfOperations;
 
-    public Surgeon(String name, String surname, String education, Date birthDay, String specialization) {
+    public Surgeon(String name, String surname, String education,
+                   Date birthDay, String specialization) {
         super(name, surname, education, birthDay, specialization);
     }
-
 
     public int getNumbersOfOperations() {
         return numbersOfOperations;
     }
-
 
     public void operating(String patient) {
     }

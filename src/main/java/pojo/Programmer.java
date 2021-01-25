@@ -10,26 +10,16 @@ public class Programmer extends Engineer {
     private String specialization;
     private String kindProject;
 
-
-    public Programmer(String name, String surname, String education, Date birthDay, String specialization) {
+    public Programmer(String name, String surname, String education,
+                      Date birthDay, String specialization) {
         super(name, surname, education, birthDay, specialization);
     }
-
 
     public String getKindProject() {
         return kindProject;
     }
 
-
     public void program() {
 
     }
-
-
-
-
-
-
-
-
 }

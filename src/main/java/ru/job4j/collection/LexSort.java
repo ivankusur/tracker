@@ -27,7 +27,7 @@ public class LexSort implements Comparator<String> {
         }
         Integer[] firstInt = firstList.toArray(new Integer[0]);
         Integer[] secondInt = secondList.toArray(new Integer[0]);
-        return Arrays.compare(firstInt,secondInt);
+        return Arrays.compare(firstInt, secondInt);
     }
 
     public static void main(String[] args) {
